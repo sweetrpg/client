@@ -1,1 +1,1 @@
-# sweetrpg-client
+# sweetrpg-sdk
