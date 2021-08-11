@@ -12,7 +12,7 @@ import LibraryModel
 
 /// `Volume` requests.
 public enum Volumes {
-    /// Gets the current profile.
+    /// Gets the current set of volumes.
     ///
     /// - Returns: Request for `Profile`.
     public static func all() -> Request<[Volume]> {

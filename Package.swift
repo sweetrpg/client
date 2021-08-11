@@ -21,11 +21,13 @@ let package = Package(name: "sweetrpg-sdk",
             //            .package(url: "https://github.com/vapor/redis.git", from: "4.0.0"),
             // .package(name: "sweetrpg-users-model", path: "../UsersModel"),
             .package(url: "ssh://git@github.com/paulyhedral/sweetrpg-library-model.git", .branch("develop")),
+            .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0"),
         ],
         targets: [
             .target(
                     name: "SDK",
                     dependencies: [
+                        .product(name: "Logging", package: "swift-log"),
                 .product(name: "Fluent", package: "fluent"),
                         //                        .product(name: "FluentMongoDriver", package: "fluent-mongo-driver"),
                         //                        .product(name: "Leaf", package: "leaf"),

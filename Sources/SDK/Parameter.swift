@@ -8,10 +8,11 @@
 
 import Foundation
 
+
 struct Parameter {
-    let name: String
-    let value: String?
+    let name : String
+    let value : String?
 }
 
 // MARK: - Equatable
-extension Parameter: Equatable {}
+extension Parameter : Equatable {}

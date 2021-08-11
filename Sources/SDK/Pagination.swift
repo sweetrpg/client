@@ -8,22 +8,23 @@
 
 import Foundation
 
+
 public struct Pagination {
     /// The request range for fetching the next page.
-    public let next: RequestRange?
+    public let next : RequestRange?
     /// The request range for fetching the previous page.
-    public let previous: RequestRange?
+    public let previous : RequestRange?
 }
 
 extension Pagination {
-    init(string: String) {
+    init(string : String) {
         let links =
                 string
                         .components(separatedBy: ",")
                         .compactMap(PaginationItem.init)
 
-        var nextLink: RequestRange?
-        var previousLink: RequestRange?
+        var nextLink : RequestRange?
+        var previousLink : RequestRange?
 
         for link in links {
             switch link.type {
@@ -38,4 +39,4 @@ extension Pagination {
 }
 
 // MARK: - Equatable
-extension Pagination: Equatable {}
+extension Pagination : Equatable {}

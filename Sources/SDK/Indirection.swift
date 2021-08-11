@@ -8,25 +8,26 @@
 
 import Foundation
 
+
 public struct Indirect<T> {
 
     // Class wrapper to provide the actual indirection.
     private final class Wrapper {
 
-        var value: T
+        var value : T
 
-        init(_ value: T) {
+        init(_ value : T) {
             self.value = value
         }
     }
 
-    private var wrapper: Wrapper
+    private var wrapper : Wrapper
 
-    public init(_ value: T) {
+    public init(_ value : T) {
         wrapper = Wrapper(value)
     }
 
-    public var value: T {
+    public var value : T {
         get {
             return wrapper.value
         }
@@ -36,7 +37,8 @@ public struct Indirect<T> {
             // otherwise, create a new instance.
             if isKnownUniquelyReferenced(&wrapper) {
                 wrapper.value = newValue
-            } else {
+            }
+            else {
                 wrapper = Wrapper(newValue)
             }
         }

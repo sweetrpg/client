@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 enum HTTPMethod {
     case get(Payload)
     case post(Payload)
@@ -17,7 +18,7 @@ enum HTTPMethod {
 }
 
 extension HTTPMethod {
-    var name: String {
+    var name : String {
         switch self {
         case .get: return "GET"
         case .post: return "POST"
@@ -27,14 +28,14 @@ extension HTTPMethod {
         }
     }
 
-    var queryItems: [URLQueryItem]? {
+    var queryItems : [URLQueryItem]? {
         switch self {
         case .get(let payload): return payload.items
         default: return nil
         }
     }
 
-    var httpBody: Data? {
+    var httpBody : Data? {
         switch self {
         case .post(let payload): return payload.data
         case .put(let payload): return payload.data
@@ -44,7 +45,7 @@ extension HTTPMethod {
         }
     }
 
-    var contentType: String? {
+    var contentType : String? {
         switch self {
         case .post(let payload): return payload.type
         case .put(let payload): return payload.type
