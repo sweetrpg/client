@@ -21,23 +21,22 @@ struct PaginationItem {
 
 extension PaginationItem {
     init?(webLink : String) {
-        let segments =
-                webLink
-                        .condensed()
-                        .components(separatedBy: ";")
+        let segments = webLink.condensed()
+                              .components(separatedBy: ";")
 
-        let url = segments.first.map(trim(left: "<", right: ">"))
+        let url = segments.first
+                .map(trim(left: "<", right: ">"))
         let rel = segments.last?
                           .replacingOccurrences(of: "\"", with: "")
                           .trimmingCharacters(in: .whitespaces)
                           .components(separatedBy: "=")
 
-        guard
-                let validURL = url,
-                let referenceKey = rel?.first, referenceKey == "rel",
-                let referenceValue = rel?.last,
-                let type = PaginationItemType(rawValue: referenceValue),
-                let queryItems = URLComponents(string: validURL)?.queryItems
+        guard let validURL = url,
+              let referenceKey = rel?.first,
+              referenceKey == "rel",
+              let referenceValue = rel?.last,
+              let type = PaginationItemType(rawValue: referenceValue),
+              let queryItems = URLComponents(string: validURL)?.queryItems
                 else {
             return nil
         }
@@ -55,11 +54,9 @@ extension PaginationItem {
 
         self.type = type
         self.id = id
-        self.limit =
-        queryItems
-                .first {
-                    $0.name == "limit"
-                }
-                .flatMap(toInteger)
+        self.limit = queryItems.first {
+                                   $0.name == "limit"
+                               }
+                               .flatMap(toInteger)
     }
 }

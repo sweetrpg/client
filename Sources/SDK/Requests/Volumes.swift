@@ -15,7 +15,7 @@ public enum Volumes {
     /// Gets the current set of volumes.
     ///
     /// - Returns: Request for `Profile`.
-    public static func all() -> Request<[Volume]> {
-        return Request<[Volume]>(service: Library("/volumes"))
+    public static func all(first : Int = 0, limit : Int = 100) -> Request<[Volume]> {
+        Request<[Volume]>(service: Library("/volumes"))
     }
 }
