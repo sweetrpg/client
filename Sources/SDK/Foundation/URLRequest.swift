@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import FoundationNetworking
 
 
-extension URLRequest {
+public extension URLRequest {
 
     init<A>(url : URL, request : Request<A>, accessToken : String?) {
         self.init(url: url, timeoutInterval: 30)
