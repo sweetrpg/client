@@ -10,6 +10,7 @@ import Foundation
 
 
 extension Decodable {
+
     static func decode(data : Data) throws -> Self {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(.serverFormatter)

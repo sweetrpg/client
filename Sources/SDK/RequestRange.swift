@@ -10,12 +10,10 @@ import Foundation
 
 
 public enum RequestRange {
-    /// Gets a list with IDs less than or equal this value.
-    case max(id : String, limit : Int?)
-    /// Gets a list with IDs greater than this value.
-    case since(id : String, limit : Int?)
-    /// Sets the maximum number of entities to get.
-    case limit(Int)
+    /// Gets a list starting at offset, up to an upper offset, inclusive.
+    case from(offset : Int, to : Int?)
+    /// Gets a list starting at offset
+    case startingAt(offset : Int, limit : Int?)
     /// Applies the default values.
     case `default`
 }
@@ -23,18 +21,22 @@ public enum RequestRange {
 extension RequestRange {
     func parameters(limit limitFunction : (Int) -> Int) -> [Parameter]? {
         switch self {
-        case .max(let id, let limit):
+        case .from(let start, let end):
+            guard (end ?? 0) >= start else { return nil }
             return [
-                Parameter(name: "max_id", value: id),
+                Parameter(name: "offset", value: String(start)),
+                Parameter(name: "limit", value: String(((end ?? start) - start) + 1))
+            ]
+
+        case .startingAt(let offset, let limit):
+            return [
+                Parameter(name: "offset", value: String(offset)),
                 Parameter(name: "limit", value: limit.map(limitFunction).flatMap(toOptionalString)),
             ]
-        case .since(let id, let limit):
-            return [
-                Parameter(name: "since_id", value: id),
-                Parameter(name: "limit", value: limit.map(limitFunction).flatMap(toOptionalString)),
-            ]
-        case .limit(let limit):
-            return [ Parameter(name: "limit", value: String(limitFunction(limit))) ]
+
+//        case .limit(let limit):
+//            return [ Parameter(name: "limit", value: String(limitFunction(limit))) ]
+
         default:
             return nil
         }

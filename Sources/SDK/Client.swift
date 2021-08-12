@@ -24,8 +24,7 @@ public struct Client : ClientType {
     }
 
     public func run<Model>(_ request : Request<Model>, completion : @escaping (Result<Model>) -> Void) {
-        guard
-                let components = URLComponents(baseURL: baseURL, request: request),
+        guard let components = URLComponents(baseURL: baseURL, request: request),
                 let url = components.url
                 else {
             logger.warning("Malformed URL in request: \(request)")
@@ -48,8 +47,7 @@ public struct Client : ClientType {
                 return
             }
 
-            guard
-                    let httpResponse = response as? HTTPURLResponse,
+            guard let httpResponse = response as? HTTPURLResponse,
                     httpResponse.statusCode == 200
                     else {
                 logger.warning("Unexpected response: \(response)")

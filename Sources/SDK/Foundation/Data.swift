@@ -10,6 +10,7 @@ import Foundation
 
 
 extension Data {
+
     // init?(mediaAttachment: MediaAttachment) {
     //   guard let mediaData = mediaAttachment.data else { return nil }
     //   self.init()
@@ -21,6 +22,7 @@ extension Data {
     //   append("\r\n")
     //   append("--KankaKitBoundary--\r\n")
     // }
+
     mutating func append(_ string : String?) {
         guard let data = string?.data(using: .utf8) else {
             return

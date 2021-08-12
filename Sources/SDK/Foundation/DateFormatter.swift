@@ -10,6 +10,7 @@ import Foundation
 
 
 extension DateFormatter {
+
     static let serverFormatter : DateFormatter = {
         let dateFormatter = DateFormatter()
 

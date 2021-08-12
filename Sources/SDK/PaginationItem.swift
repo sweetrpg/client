@@ -15,7 +15,7 @@ enum PaginationItemType : String {
 
 struct PaginationItem {
     let type : PaginationItemType
-    let id : String
+    let offset : Int
     let limit : Int?
 }
 
@@ -41,19 +41,23 @@ extension PaginationItem {
             return nil
         }
 
-        let sinceID = queryItems.first {
-            $0.name == "since_id"
-        }?.value
-        let maxID = queryItems.first {
-            $0.name == "max_id"
-        }?.value
+        let offset = queryItems.first {
+            $0.name == "offset"
+        }?
+                .value
+                .flatMap {
+            Int($0)
+        }
+//        let maxID = queryItems.first {
+//            $0.name == "max_id"
+//        }?.value
 
-        guard let id = maxID ?? sinceID else {
+        guard let offsetValue = offset else {
             return nil
         }
 
         self.type = type
-        self.id = id
+        self.offset = offsetValue
         self.limit = queryItems.first {
                                    $0.name == "limit"
                                }

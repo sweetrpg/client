@@ -8,11 +8,12 @@
 
 import Foundation
 
+
 extension URLComponents {
-    init?<A>(baseURL: String, request: Request<A>) {
-        guard
-                let realBaseURL = URL(string: baseURL),
-                let completeURL = URL(string: request.path, relativeTo: realBaseURL)
+
+    init?<A>(baseURL : String, request : Request<A>) {
+        guard let realBaseURL = URL(string: baseURL),
+              let completeURL = URL(string: request.path, relativeTo: realBaseURL)
                 else {
             return nil
         }
@@ -22,4 +23,5 @@ extension URLComponents {
         path = request.path
         queryItems = request.method.queryItems
     }
+
 }

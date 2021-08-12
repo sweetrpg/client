@@ -10,6 +10,7 @@ import Foundation
 
 
 extension CharacterSet {
+
     static let bodyAllowed : CharacterSet = {
         CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~/?")
     }()

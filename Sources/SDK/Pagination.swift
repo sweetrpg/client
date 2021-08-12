@@ -18,9 +18,7 @@ public struct Pagination {
 
 extension Pagination {
     init(string : String) {
-        let links =
-                string
-                        .components(separatedBy: ",")
+        let links = string.components(separatedBy: ",")
                         .compactMap(PaginationItem.init)
 
         var nextLink : RequestRange?
@@ -28,8 +26,8 @@ extension Pagination {
 
         for link in links {
             switch link.type {
-            case .next: nextLink = .max(id: link.id, limit: link.limit)
-            case .prev: previousLink = .since(id: link.id, limit: link.limit)
+            case .next: nextLink = .startingAt(offset: link.offset, limit: link.limit)
+            case .prev: previousLink = .startingAt(offset: link.offset, limit: link.limit)
             }
         }
 

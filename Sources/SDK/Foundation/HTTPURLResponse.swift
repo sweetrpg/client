@@ -10,6 +10,7 @@ import Foundation
 
 
 extension HTTPURLResponse {
+
     var pagination : Pagination? {
         return allHeaderFields["Link"]
                 .flatMap {
