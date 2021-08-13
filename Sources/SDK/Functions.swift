@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 // MARK: - Map
 // func toString(scope: AccessScope) -> String {
 //   return scope.rawValue

@@ -7,7 +7,9 @@
 //
 
 import Foundation
-import FoundationNetworking
+#if os(Linux)
+    import FoundationNetworking
+#endif
 
 
 extension HTTPURLResponse {

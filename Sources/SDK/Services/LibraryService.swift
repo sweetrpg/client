@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 public struct Library : Service {
     static private let basePath = "/api/library"
     private var _path : String
