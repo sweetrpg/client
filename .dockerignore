@@ -3,3 +3,5 @@
 .git/
 .vscode/
 .idea/
+.github/
+package-info.json
