@@ -19,9 +19,7 @@
   "remoteEnv": {
     "LOCAL_USER_PATH": "${localEnv:HOME}${localEnv:USERPROFILE}"
   },
-  "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"
-    //  "--ssh=default"
-    ],
+  "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
 
   "mounts": [
     // "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/mnt/ssh/,type=bind",
@@ -63,7 +61,7 @@
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "swiftc --version",
-  "initializeCommand": "ssh-add ${localEnv:USERPROFILE}/.ssh/id_rsa",
+  "initializeCommand": "ssh-add ${localEnv:HOME}${localEnv:USERPROFILE}/.ssh/id_rsa",
 
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode"
