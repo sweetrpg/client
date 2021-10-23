@@ -16,16 +16,15 @@ import sys
 sys.path.insert(0, os.path.abspath("../src"))
 sys.path.insert(0, os.path.abspath("_themes"))
 
-import sweetrpg_db
-
+import sweetrpg_sdk
 
 # -- Project information -----------------------------------------------------
 
-project = "SweetRPG DB"
+project = "SweetRPG SDK"
 copyright = "2021, Paul Schifferer"
 author = "Paul Schifferer"
-version = sweetrpg_db.__version__
-release = sweetrpg_db.__version__
+version = sweetrpg_sdk.__version__
+release = sweetrpg_sdk.__version__
 
 # -- General configuration ---------------------------------------------------
 
@@ -84,7 +83,6 @@ autodoc_default_options = {
     'exclude-members': '__weakref__'
 }
 
-
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -116,24 +114,23 @@ html_show_sphinx = False
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = True
 
-
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
-    #'papersize': 'letterpaper',
+    # 'papersize': 'letterpaper',
     # The font size ('10pt', '11pt' or '12pt').
-    #'pointsize': '10pt',
+    # 'pointsize': '10pt',
     # Additional stuff for the LaTeX preamble.
-    #'preamble': '',
+    # 'preamble': '',
     # Latex figure (float) alignment
-    #'figure_align': 'htbp',
+    # 'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [(master_doc, "SweetRPG-DB.tex", u"SweetRPG DB Documentation", u"Paul Schifferer", "manual")]
+latex_documents = [(master_doc, "SweetRPG-SDK.tex", u"SweetRPG SDK Documentation", u"Paul Schifferer", "manual")]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -160,7 +157,7 @@ latex_documents = [(master_doc, "SweetRPG-DB.tex", u"SweetRPG DB Documentation",
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "sweetrpg-db", u"SweetRPG DB Documentation", [author], 1)]
+man_pages = [(master_doc, "sweetrpg-sdk", u"SweetRPG SDK Documentation", [author], 1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
@@ -174,10 +171,10 @@ man_pages = [(master_doc, "sweetrpg-db", u"SweetRPG DB Documentation", [author],
 texinfo_documents = [
     (
         master_doc,
-        "SweetRPG DB",
-        u"SweetRPG DB Documentation",
+        "SweetRPG SDK",
+        u"SweetRPG SDK Documentation",
         author,
-        "SweetRPG DB",
+        "SweetRPG SDK",
         "One line description of project.",
         "Miscellaneous",
     )
