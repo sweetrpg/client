@@ -7,4 +7,12 @@ from sweetrpg_sdk.client import Client
 
 
 def test_client():
-    client = Client()
+    client = Client('http://localhost')
+
+
+def test_registration():
+    pass
+
+
+def test_get():
+    pass
