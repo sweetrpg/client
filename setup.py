@@ -2,7 +2,7 @@ from setuptools import setup
 
 # Metadata goes in setup.cfg. These are here for GitHub's dependency graph.
 setup(
-    name="sweetrpg-sdk",
-    install_requires=["marshmallow==3.13", "sweetrpg-model-core"],
+    name="sweetrpg-client",
+    install_requires=["marshmallow==3.13", "sweetrpg-model-core", "requests"],
     extras_require={},
 )

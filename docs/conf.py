@@ -16,15 +16,15 @@ import sys
 sys.path.insert(0, os.path.abspath("../src"))
 sys.path.insert(0, os.path.abspath("_themes"))
 
-import sweetrpg_sdk
+import sweetrpg_client
 
 # -- Project information -----------------------------------------------------
 
 project = "SweetRPG SDK"
 copyright = "2021, Paul Schifferer"
 author = "Paul Schifferer"
-version = sweetrpg_sdk.__version__
-release = sweetrpg_sdk.__version__
+version = sweetrpg_client.__version__
+release = sweetrpg_client.__version__
 
 # -- General configuration ---------------------------------------------------
 
@@ -130,7 +130,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [(master_doc, "SweetRPG-SDK.tex", u"SweetRPG SDK Documentation", u"Paul Schifferer", "manual")]
+latex_documents = [(master_doc, "sweetrpg-client.tex", u"SweetRPG SDK Documentation", u"Paul Schifferer", "manual")]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -157,7 +157,7 @@ latex_documents = [(master_doc, "SweetRPG-SDK.tex", u"SweetRPG SDK Documentation
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "sweetrpg-sdk", u"SweetRPG SDK Documentation", [author], 1)]
+man_pages = [(master_doc, "sweetrpg-client", u"SweetRPG SDK Documentation", [author], 1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False

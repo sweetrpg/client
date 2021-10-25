@@ -3,7 +3,6 @@
 SDK
 ===
 
-.. module:: sweetrpg_sdk
+.. module:: sweetrpg_client
 
 This part of the documentation covers ...
-

@@ -3,7 +3,7 @@ __author__ = "Paul Schifferer <dm@sweetrpg.com>"
 """Metadata.
 """
 
-__title__ = "sweetrpg-sdk"
+__title__ = "sweetrpg-client"
 __description__ = "SweetRPG SDK"
 __url__ = "https://github.com/sweetrpg/sdk"
 __version__ = "0.0.2"

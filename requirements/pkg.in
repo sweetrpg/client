@@ -1,3 +1,4 @@
 marshmallow==3.13
-mongoengine
 git+https://github.com/sweetrpg/model-core.git@develop
+git+https://github.com/sweetrpg/library-objects.git@develop
+requests
