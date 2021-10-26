@@ -20,7 +20,7 @@ import sweetrpg_client
 
 # -- Project information -----------------------------------------------------
 
-project = "SweetRPG SDK"
+project = "SweetRPG API Client"
 copyright = "2021, Paul Schifferer"
 author = "Paul Schifferer"
 version = sweetrpg_client.__version__
@@ -93,7 +93,7 @@ html_theme = "alabaster"
 html_theme_options = {
     "show_powered_by": False,
     "github_user": "sweetrpg",
-    "github_repo": "db",
+    "github_repo": "client",
     "github_banner": True,
     "show_related": False,
     "note_bg": "#FFF59C",
@@ -130,7 +130,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [(master_doc, "sweetrpg-client.tex", u"SweetRPG SDK Documentation", u"Paul Schifferer", "manual")]
+latex_documents = [(master_doc, "sweetrpg-client.tex", u"SweetRPG CLIENT Documentation", u"Paul Schifferer", "manual")]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -157,7 +157,7 @@ latex_documents = [(master_doc, "sweetrpg-client.tex", u"SweetRPG SDK Documentat
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "sweetrpg-client", u"SweetRPG SDK Documentation", [author], 1)]
+man_pages = [(master_doc, "sweetrpg-client", u"SweetRPG CLIENT Documentation", [author], 1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
@@ -171,11 +171,11 @@ man_pages = [(master_doc, "sweetrpg-client", u"SweetRPG SDK Documentation", [aut
 texinfo_documents = [
     (
         master_doc,
-        "SweetRPG SDK",
-        u"SweetRPG SDK Documentation",
+        "SweetRPG API Client",
+        u"SweetRPG API Client Documentation",
         author,
-        "SweetRPG SDK",
-        "One line description of project.",
+        "SweetRPG API Client",
+        "API Client.",
         "Miscellaneous",
     )
 ]

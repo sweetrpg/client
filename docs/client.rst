@@ -1,7 +1,7 @@
-.. _sdk:
+.. _client:
 
-SDK
-===
+Client
+======
 
 .. module:: sweetrpg_client
 

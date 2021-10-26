@@ -12,6 +12,12 @@ backports.entry-points-selectable==1.1.0
     # via virtualenv
 blinker==1.4
     # via -r requirements/tests.in
+certifi==2021.10.8
+    # via requests
+charset-normalizer==2.0.7
+    # via requests
+click==8.0.3
+    # via flask
 coverage[toml]==5.5
     # via
     #   coverage-badge
@@ -20,22 +26,35 @@ coverage-badge==1.0.2
     # via -r requirements/tests.in
 distlib==0.3.3
     # via virtualenv
-dnspython==1.16.0
-    # via pymongo
 filelock==3.3.1
     # via
     #   tox
     #   virtualenv
+flask==2.0.2
+    # via sweetrpg-library-objects
 greenlet==1.1.2
     # via -r requirements/tests.in
+idna==3.3
+    # via requests
 iniconfig==1.1.1
     # via pytest
-marshmallow==3.13
+itsdangerous==2.0.1
+    # via flask
+jinja2==3.0.2
+    # via flask
+markupsafe==2.0.1
+    # via jinja2
+marshmallow==3.14.0
     # via
     #   -r requirements/pkg.in
-    #   sweetrpg-model-core
+    #   marshmallow-jsonapi
+    #   sweetrpg-db
+marshmallow-jsonapi==0.24.0
+    # via sweetrpg-library-objects
 mongoengine==0.23.1
-    # via -r requirements/pkg.in
+    # via
+    #   sweetrpg-db
+    #   sweetrpg-library-objects
 packaging==21.0
     # via
     #   pytest
@@ -50,10 +69,8 @@ py==1.10.0
     # via
     #   pytest
     #   tox
-pymongo[srv,tls]==3.12.0
-    # via
-    #   mongoengine
-    #   sweetrpg-model-core
+pymongo==3.12.0
+    # via mongoengine
 pyparsing==3.0.0
     # via packaging
 pytest==6.2.5
@@ -70,12 +87,26 @@ pytest-ordering==0.6
     # via -r requirements/tests.in
 python-dotenv==0.19.1
     # via -r requirements/tests.in
+requests==2.26.0
+    # via
+    #   -r requirements/pkg.in
+    #   responses
+responses==0.14.0
+    # via -r requirements/tests.in
 six==1.16.0
     # via
+    #   responses
     #   tox
     #   virtualenv
-sweetrpg-model-core @ git+https://github.com/sweetrpg/model-core.git@develop
+sweetrpg-db==0.0.14
+    # via sweetrpg-library-objects
+sweetrpg-library-objects @ git+https://github.com/sweetrpg/library-objects.git@develop
     # via -r requirements/pkg.in
+sweetrpg-model-core @ git+https://github.com/sweetrpg/model-core.git@develop
+    # via
+    #   -r requirements/pkg.in
+    #   sweetrpg-db
+    #   sweetrpg-library-objects
 toml==0.10.2
     # via
     #   coverage
@@ -83,5 +114,11 @@ toml==0.10.2
     #   tox
 tox==3.24.4
     # via -r requirements/tests.in
+urllib3==1.26.7
+    # via
+    #   requests
+    #   responses
 virtualenv==20.9.0
     # via tox
+werkzeug==2.0.2
+    # via flask

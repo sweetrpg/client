@@ -12,27 +12,38 @@ certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.7
     # via requests
-dnspython==1.16.0
-    # via pymongo
+click==8.0.3
+    # via flask
 docutils==0.16
     # via
     #   rstcheck
     #   sphinx
     #   sphinx-tabs
+flask==2.0.2
+    # via sweetrpg-library-objects
 idna==3.3
     # via requests
 imagesize==1.2.0
     # via sphinx
+itsdangerous==2.0.1
+    # via flask
 jinja2==3.0.2
-    # via sphinx
+    # via
+    #   flask
+    #   sphinx
 markupsafe==2.0.1
     # via jinja2
-marshmallow==3.13
+marshmallow==3.14.0
     # via
     #   -r requirements/pkg.in
-    #   sweetrpg-model-core
+    #   marshmallow-jsonapi
+    #   sweetrpg-db
+marshmallow-jsonapi==0.24.0
+    # via sweetrpg-library-objects
 mongoengine==0.23.1
-    # via -r requirements/pkg.in
+    # via
+    #   sweetrpg-db
+    #   sweetrpg-library-objects
 packaging==21.0
     # via
     #   pallets-sphinx-themes
@@ -43,16 +54,16 @@ pygments==2.10.0
     # via
     #   sphinx
     #   sphinx-tabs
-pymongo[srv,tls]==3.12.0
-    # via
-    #   mongoengine
-    #   sweetrpg-model-core
+pymongo==3.12.0
+    # via mongoengine
 pyparsing==3.0.0
     # via packaging
 pytz==2021.3
     # via babel
 requests==2.26.0
-    # via sphinx
+    # via
+    #   -r requirements/pkg.in
+    #   sphinx
 rstcheck==3.3.1
     # via -r requirements/docs.in
 snowballstemmer==2.1.0
@@ -82,10 +93,19 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sweetrpg-model-core @ git+https://github.com/sweetrpg/model-core.git@develop
+sweetrpg-db==0.0.14
+    # via sweetrpg-library-objects
+sweetrpg-library-objects @ git+https://github.com/sweetrpg/library-objects.git@develop
     # via -r requirements/pkg.in
+sweetrpg-model-core @ git+https://github.com/sweetrpg/model-core.git@develop
+    # via
+    #   -r requirements/pkg.in
+    #   sweetrpg-db
+    #   sweetrpg-library-objects
 urllib3==1.26.7
     # via requests
+werkzeug==2.0.2
+    # via flask
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

@@ -25,6 +25,7 @@ charset-normalizer==2.0.7
 click==8.0.3
     # via
     #   black
+    #   flask
     #   pip-tools
 coverage[toml]==5.5
     # via
@@ -45,6 +46,8 @@ filelock==3.3.1
     # via
     #   tox
     #   virtualenv
+flask==2.0.2
+    # via sweetrpg-library-objects
 greenlet==1.1.2
     # via -r requirements/tests.in
 idna==3.3
@@ -53,16 +56,26 @@ imagesize==1.2.0
     # via sphinx
 iniconfig==1.1.1
     # via pytest
+itsdangerous==2.0.1
+    # via flask
 jinja2==3.0.2
-    # via sphinx
+    # via
+    #   flask
+    #   sphinx
 markupsafe==2.0.1
     # via jinja2
-marshmallow==3.13
+marshmallow==3.14.0
     # via
     #   -r requirements/pkg.in
+    #   marshmallow-jsonapi
+    #   sweetrpg-db
     #   sweetrpg-model-core
+marshmallow-jsonapi==0.24.0
+    # via sweetrpg-library-objects
 mongoengine==0.23.1
-    # via -r requirements/pkg.in
+    # via
+    #   sweetrpg-db
+    #   sweetrpg-library-objects
 mypy-extensions==0.4.3
     # via black
 packaging==21.0
@@ -120,11 +133,17 @@ pytz==2021.3
 regex==2021.10.23
     # via black
 requests==2.26.0
-    # via sphinx
+    # via
+    #   -r requirements/pkg.in
+    #   responses
+    #   sphinx
+responses==0.14.0
+    # via -r requirements/tests.in
 rstcheck==3.3.1
     # via -r requirements/docs.in
 six==1.16.0
     # via
+    #   responses
     #   tox
     #   virtualenv
 snowballstemmer==2.1.0
@@ -154,8 +173,15 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sweetrpg-model-core @ git+https://github.com/sweetrpg/model-core.git@develop
+sweetrpg-db==0.0.14
+    # via sweetrpg-library-objects
+sweetrpg-library-objects @ git+https://github.com/sweetrpg/library-objects.git@develop
     # via -r requirements/pkg.in
+sweetrpg-model-core @ git+https://github.com/sweetrpg/model-core.git@develop
+    # via
+    #   -r requirements/pkg.in
+    #   sweetrpg-db
+    #   sweetrpg-library-objects
 toml==0.10.2
     # via
     #   coverage
@@ -170,9 +196,13 @@ tox==3.24.4
 typing-extensions==3.10.0.2
     # via black
 urllib3==1.26.7
-    # via requests
+    # via
+    #   requests
+    #   responses
 virtualenv==20.9.0
     # via tox
+werkzeug==2.0.2
+    # via flask
 wheel==0.37.0
     # via pip-tools
 
