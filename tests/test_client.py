@@ -19,7 +19,15 @@ def test_registration():
 @responses.activate
 def test_get():
     responses.add(responses.GET, 'http://localhost/volumes/1',
-                  json={'data': {'type': 'volume', 'id': 1, 'attributes': {}}}, status=200)
+                  json={'data': {'type': 'volume', 'id': '1',
+                                 'attributes': {"slug": "mm9-dnd3.5e",
+                                                "system": "dnd35",
+                                                "name": "Monster Manual 9",
+                                                "updated_at": "2021-10-10T08:28:25.068000",
+                                                "created_at": "2021-10-10T08:28:25.068000"}},
+                         'meta': {'count': 1},
+                         'jsonapi': {'version': '1.0'}},
+                  status=200)
 
     client = Client('http://localhost')
     obj = client.get(VOLUME, '1')
@@ -28,7 +36,14 @@ def test_get():
 @responses.activate
 def test_query():
     responses.add(responses.GET, 'http://localhost/volumes/',
-                  json={'data': [{'type': 'volume', 'id': 1, 'attributes': {}}]}, status=200)
+                  json={'data': [{'type': 'volume', 'id': '1',
+                                  'attributes': { "slug": "mm9-dnd3.5e",
+                                                "system": "dnd35",
+                                                "name": "Monster Manual 9",
+                                                "updated_at": "2021-10-10T08:28:25.068000",
+                                                  "created_at": "2021-10-10T08:28:25.068000"}}],
+                        'jsonapi': {'version': '1.0'}},
+                  status=200)
 
     client = Client('http://localhost')
     objs = client.query(VOLUME)
