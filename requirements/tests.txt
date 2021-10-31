@@ -28,7 +28,7 @@ distlib==0.3.3
     # via virtualenv
 dnspython==2.1.0
     # via pymongo
-filelock==3.3.1
+filelock==3.3.2
     # via
     #   tox
     #   virtualenv
@@ -69,7 +69,7 @@ mongoengine==0.23.1
     #   sweetrpg-api-core
     #   sweetrpg-db
     #   sweetrpg-library-objects
-packaging==21.0
+packaging==21.2
     # via
     #   pytest
     #   tox
@@ -87,7 +87,7 @@ pymongo[srv,tls]==3.12.1
     # via
     #   mongoengine
     #   sweetrpg-model-core
-pyparsing==3.0.0
+pyparsing==2.4.7
     # via packaging
 pytest==6.2.5
     # via
@@ -107,7 +107,7 @@ requests==2.26.0
     # via
     #   -r requirements/pkg.in
     #   responses
-responses==0.14.0
+responses==0.15.0
     # via -r requirements/tests.in
 six==1.16.0
     # via
@@ -117,15 +117,15 @@ six==1.16.0
     #   virtualenv
 sqlalchemy==1.4.26
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.17
+sweetrpg-api-core==0.0.19
     # via -r requirements/pkg.in
-sweetrpg-db==0.0.14
+sweetrpg-db==0.0.18
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.28
+sweetrpg-library-objects==0.0.29
     # via -r requirements/pkg.in
-sweetrpg-model-core==0.0.21
+sweetrpg-model-core==0.0.22
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-api-core

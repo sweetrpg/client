@@ -24,8 +24,9 @@ def test_get():
                                                 "system": "dnd35",
                                                 "name": "Monster Manual 9",
                                                 "updated_at": "2021-10-10T08:28:25.068000",
-                                                "created_at": "2021-10-10T08:28:25.068000"}},
-                         'meta': {'count': 1},
+                                                "updated_by": "tester",
+                                                "created_at": "2021-10-10T08:28:25.068000",
+                                                  "created_by": "tester"}},
                          'jsonapi': {'version': '1.0'}},
                   status=200)
 
@@ -41,7 +42,10 @@ def test_query():
                                                 "system": "dnd35",
                                                 "name": "Monster Manual 9",
                                                 "updated_at": "2021-10-10T08:28:25.068000",
-                                                  "created_at": "2021-10-10T08:28:25.068000"}}],
+                                                  "updated_by": "tester",
+                                                  "created_at": "2021-10-10T08:28:25.068000",
+                                                  "created_by": "tester"}}],
+                        # 'meta': {'count': 1},
                         'jsonapi': {'version': '1.0'}},
                   status=200)
 
