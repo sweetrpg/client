@@ -1,5 +1,5 @@
 marshmallow==3.14.0
-git+https://github.com/sweetrpg/api-core.git@develop
-git+https://github.com/sweetrpg/model-core.git@develop
-git+https://github.com/sweetrpg/library-objects.git@develop
+sweetrpg-api-core
+sweetrpg-model-core
+sweetrpg-library-objects
 requests
