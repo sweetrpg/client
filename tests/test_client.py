@@ -20,16 +20,12 @@ def test_registration():
 
 @responses.activate
 def test_get():
+    # load test data file
+    path = os.path.dirname(__file__) + '/test-single-volume.json'
+    with open(path, 'r') as v:
+        volumes_data = json.load(v)
     responses.add(responses.GET, 'http://localhost/volumes/1',
-                  json={'data': {'type': 'volume', 'id': '1',
-                                 'attributes': {"slug": "mm9-dnd3.5e",
-                                                "system": "dnd35",
-                                                "name": "Monster Manual 9",
-                                                "updated_at": "2021-10-10T08:28:25.068000",
-                                                "updated_by": "tester",
-                                                "created_at": "2021-10-10T08:28:25.068000",
-                                                  "created_by": "tester"}},
-                         'jsonapi': {'version': '1.0'}},
+                  json=volumes_data,
                   status=200)
 
     client = Client('http://localhost')

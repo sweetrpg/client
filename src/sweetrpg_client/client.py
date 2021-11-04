@@ -19,11 +19,15 @@ class Client(object):
     """
 
     def __init__(self, base_url: str, access_token: str = None, register_default_types: bool = True):
-        """
+        """Create a new client instance using the provided base URL for the API endpoint. An optional
+        access token may be provided.
 
-        :param str base_url:
-        :param str access_token:
-        :param bool register_default_types:
+        :param str base_url: The base URL of the API service. Paths will be appended for the appropriate
+        type when the request is executed.
+        :param str access_token: A bearer access token to use for endpoints that may require it.
+        :param bool register_default_types: The client package comes with a number of types ready to use
+        that will be registered automatically if this value is `True`. Set this to `False` if you don't want
+        those types registered.
         """
         self.base_url = base_url
         self.access_token = access_token
