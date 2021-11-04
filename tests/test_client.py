@@ -36,17 +36,11 @@ def test_get():
 
 @responses.activate
 def test_query():
+    # load test data file
+    with open('test-volumes.json', 'r') as v:
+        volumes_data = json.load(v)
     responses.add(responses.GET, 'http://localhost/volumes/',
-                  json={'data': [{'type': 'volume', 'id': '1',
-                                  'attributes': { "slug": "mm9-dnd3.5e",
-                                                "system": "dnd35",
-                                                "name": "Monster Manual 9",
-                                                "updated_at": "2021-10-10T08:28:25.068000",
-                                                  "updated_by": "tester",
-                                                  "created_at": "2021-10-10T08:28:25.068000",
-                                                  "created_by": "tester"}}],
-                        # 'meta': {'count': 1},
-                        'jsonapi': {'version': '1.0'}},
+                  json=volumes_data,
                   status=200)
 
     client = Client('http://localhost')

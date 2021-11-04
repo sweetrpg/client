@@ -1,0 +1,329 @@
+{
+    "data": [
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-08-01T07:00:00",
+                "properties": [
+                    {
+                        "id": "{'name': 'isbn', 'value': '12345', 'kind': 'isbn'}"
+                    }
+                ],
+                "created_at": "2021-08-01T07:00:00",
+                "system": "dnd5",
+                "slug": "phb-5e",
+                "name": "Player's Handbook"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/6122a9aefb6975ab08625d65/relationships/authors",
+                        "related": "/authors/?volume_id=6122a9aefb6975ab08625d65"
+                    }
+                }
+            },
+            "id": "6122a9aefb6975ab08625d65",
+            "links": {
+                "self": "/volumes/6122a9aefb6975ab08625d65"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "1970-01-01T08:00:00",
+                "properties": [],
+                "created_at": "1970-01-01T08:00:00",
+                "system": "dnd5",
+                "slug": "dmg-5e",
+                "name": "Dungeon Master's Guide"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/613e1e58e3546b1f3654bae2/relationships/authors",
+                        "related": "/authors/?volume_id=613e1e58e3546b1f3654bae2"
+                    }
+                }
+            },
+            "id": "613e1e58e3546b1f3654bae2",
+            "links": {
+                "self": "/volumes/613e1e58e3546b1f3654bae2"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "1970-01-01T08:00:00",
+                "properties": [],
+                "created_at": "1970-01-01T08:00:00",
+                "system": "dnd5",
+                "slug": "mm-5e",
+                "name": "Monter Manual"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/613e4e3ef1a732123d484f47/relationships/authors",
+                        "related": "/authors/?volume_id=613e4e3ef1a732123d484f47"
+                    }
+                }
+            },
+            "id": "613e4e3ef1a732123d484f47",
+            "links": {
+                "self": "/volumes/613e4e3ef1a732123d484f47"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-09-20T14:55:50.318000",
+                "properties": [],
+                "created_at": "2021-09-20T14:55:50.318000",
+                "system": "dnd1",
+                "slug": "wsg-dnd1e",
+                "name": "Wilderness Survival Guide"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/6148a0f65358b60a0cbed6ce/relationships/authors",
+                        "related": "/authors/?volume_id=6148a0f65358b60a0cbed6ce"
+                    }
+                }
+            },
+            "id": "6148a0f65358b60a0cbed6ce",
+            "links": {
+                "self": "/volumes/6148a0f65358b60a0cbed6ce"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-09-20T15:00:52.275000",
+                "properties": [],
+                "created_at": "2021-09-20T15:00:52.275000",
+                "system": "dnd2",
+                "slug": "wsg-dnd2e",
+                "name": "Wilderness Survival Guide"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/6148a2244e2fb50f610ae01c/relationships/authors",
+                        "related": "/authors/?volume_id=6148a2244e2fb50f610ae01c"
+                    }
+                }
+            },
+            "id": "6148a2244e2fb50f610ae01c",
+            "links": {
+                "self": "/volumes/6148a2244e2fb50f610ae01c"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-09-21T02:48:56.992000",
+                "properties": [],
+                "created_at": "2021-09-21T02:48:56.992000",
+                "system": "dnd1",
+                "slug": "mm2-dnd1e",
+                "name": "Monster Manual II"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/61494819e4fee0c3f924b4db/relationships/authors",
+                        "related": "/authors/?volume_id=61494819e4fee0c3f924b4db"
+                    }
+                }
+            },
+            "id": "61494819e4fee0c3f924b4db",
+            "links": {
+                "self": "/volumes/61494819e4fee0c3f924b4db"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-09-21T02:51:13.214000",
+                "properties": [],
+                "created_at": "2021-09-21T02:51:13.214000",
+                "system": "dnd35",
+                "slug": "mm2-dnd3.5e",
+                "name": "Monster Manual 2"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/614948a14788940424ba138b/relationships/authors",
+                        "related": "/authors/?volume_id=614948a14788940424ba138b"
+                    }
+                }
+            },
+            "id": "614948a14788940424ba138b",
+            "links": {
+                "self": "/volumes/614948a14788940424ba138b"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-09-21T03:37:08.047000",
+                "properties": [],
+                "created_at": "2021-09-21T03:37:08.047000",
+                "system": "dnd35",
+                "slug": "mm3-dnd3.5e",
+                "name": "Monster Manual 3"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/61495364e1ae73e4aafdd6bf/relationships/authors",
+                        "related": "/authors/?volume_id=61495364e1ae73e4aafdd6bf"
+                    }
+                }
+            },
+            "id": "61495364e1ae73e4aafdd6bf",
+            "links": {
+                "self": "/volumes/61495364e1ae73e4aafdd6bf"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-10-10T04:18:26.361000",
+                "properties": [],
+                "created_at": "2021-10-10T04:18:26.361000",
+                "system": "dnd35",
+                "slug": "mm6-dnd3.5e",
+                "name": "Monster Manual 6"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/616269933f064b4ed7549ca2/relationships/authors",
+                        "related": "/authors/?volume_id=616269933f064b4ed7549ca2"
+                    }
+                }
+            },
+            "id": "616269933f064b4ed7549ca2",
+            "links": {
+                "self": "/volumes/616269933f064b4ed7549ca2"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-10-10T13:45:24.683000",
+                "properties": [],
+                "created_at": "2021-10-10T13:45:24.683000",
+                "system": "dnd35",
+                "slug": "mm7-dnd3.5e",
+                "name": "Monster Manual 7"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/6162ee75a31bddc206730935/relationships/authors",
+                        "related": "/authors/?volume_id=6162ee75a31bddc206730935"
+                    }
+                }
+            },
+            "id": "6162ee75a31bddc206730935",
+            "links": {
+                "self": "/volumes/6162ee75a31bddc206730935"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-10-10T15:20:56.649000",
+                "properties": [],
+                "created_at": "2021-10-10T15:20:56.649000",
+                "system": "dnd35",
+                "slug": "mm8-dnd3.5e",
+                "name": "Monster Manual 8"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/616304d8a183854d9aff3500/relationships/authors",
+                        "related": "/authors/?volume_id=616304d8a183854d9aff3500"
+                    }
+                }
+            },
+            "id": "616304d8a183854d9aff3500",
+            "links": {
+                "self": "/volumes/616304d8a183854d9aff3500"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-10-10T15:28:25.068000",
+                "properties": [],
+                "created_at": "2021-10-10T15:28:25.068000",
+                "system": "dnd35",
+                "slug": "mm9-dnd3.5e",
+                "name": "Monster Manual 9"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/61630699aaac36f666c379a4/relationships/authors",
+                        "related": "/authors/?volume_id=61630699aaac36f666c379a4"
+                    }
+                }
+            },
+            "id": "61630699aaac36f666c379a4",
+            "links": {
+                "self": "/volumes/61630699aaac36f666c379a4"
+            }
+        },
+        {
+            "type": "volume",
+            "attributes": {
+                "deleted_at": null,
+                "updated_at": "2021-10-11T16:21:02.705000",
+                "properties": [],
+                "created_at": "2021-10-11T16:21:02.705000",
+                "system": "dnd35",
+                "slug": "mm10-dnd3.5e",
+                "name": "Monster Manual 10"
+            },
+            "relationships": {
+                "authors": {
+                    "links": {
+                        "self": "/volumes/6164646f176f7f9d1fc98b39/relationships/authors",
+                        "related": "/authors/?volume_id=6164646f176f7f9d1fc98b39"
+                    }
+                }
+            },
+            "id": "6164646f176f7f9d1fc98b39",
+            "links": {
+                "self": "/volumes/6164646f176f7f9d1fc98b39"
+            }
+        }
+    ],
+    "links": {
+        "self": "http://api-v1:8281/volumes/"
+    },
+    "meta": {
+        "count": 13
+    },
+    "jsonapi": {
+        "version": "1.0"
+    }
+}
