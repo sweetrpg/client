@@ -6,6 +6,8 @@ __author__ = "Paul Schifferer <dm@sweetrpg.com>"
 import responses
 from sweetrpg_client.client import Client
 from sweetrpg_client.types import VOLUME
+import os
+import json
 
 
 def test_client():
@@ -37,7 +39,8 @@ def test_get():
 @responses.activate
 def test_query():
     # load test data file
-    with open('test-volumes.json', 'r') as v:
+    path = os.path.dirname(__file__) + '/test-volumes.json'
+    with open(path, 'r') as v:
         volumes_data = json.load(v)
     responses.add(responses.GET, 'http://localhost/volumes/',
                   json=volumes_data,
