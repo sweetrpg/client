@@ -4,12 +4,21 @@
 #
 #    pip-compile requirements/dev.in
 #
+aiohttp==3.8.0
+    # via jsonapi-client
+aiosignal==1.2.0
+    # via aiohttp
 alabaster==0.7.12
     # via sphinx
 asgiref==3.4.1
     # via -r requirements/tests.in
+async-timeout==4.0.0
+    # via aiohttp
 attrs==21.2.0
-    # via pytest
+    # via
+    #   aiohttp
+    #   jsonschema
+    #   pytest
 babel==2.9.1
     # via sphinx
 backports.entry-points-selectable==1.1.0
@@ -21,7 +30,9 @@ blinker==1.4
 certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.7
-    # via requests
+    # via
+    #   aiohttp
+    #   requests
 click==8.0.3
     # via
     #   black
@@ -53,12 +64,18 @@ flask==2.0.2
     #   sweetrpg-library-objects
 flask-rest-jsonapi==0.31.2
     # via sweetrpg-api-core
+frozenlist==1.2.0
+    # via
+    #   aiohttp
+    #   aiosignal
 greenlet==1.1.2
     # via
     #   -r requirements/tests.in
     #   sqlalchemy
 idna==3.3
-    # via requests
+    # via
+    #   requests
+    #   yarl
 imagesize==1.2.0
     # via sphinx
 iniconfig==1.1.1
@@ -69,6 +86,10 @@ jinja2==3.0.2
     # via
     #   flask
     #   sphinx
+jsonapi-client==0.9.9
+    # via -r requirements/pkg.in
+jsonschema==4.2.1
+    # via jsonapi-client
 markupsafe==2.0.1
     # via jinja2
 marshmallow==3.14.0
@@ -87,6 +108,10 @@ mongoengine==0.23.1
     #   sweetrpg-api-core
     #   sweetrpg-db
     #   sweetrpg-library-objects
+multidict==5.2.0
+    # via
+    #   aiohttp
+    #   yarl
 mypy-extensions==0.4.3
     # via black
 packaging==21.2
@@ -125,6 +150,8 @@ pymongo[srv,tls]==3.12.1
     #   sweetrpg-model-core
 pyparsing==2.4.7
     # via packaging
+pyrsistent==0.18.0
+    # via jsonschema
 pytest==6.2.5
     # via
     #   -r requirements/tests.in
@@ -146,6 +173,7 @@ regex==2021.11.2
 requests==2.26.0
     # via
     #   -r requirements/pkg.in
+    #   jsonapi-client
     #   responses
     #   sphinx
 responses==0.15.0
@@ -195,7 +223,7 @@ sweetrpg-db==0.0.18
     #   sweetrpg-library-objects
 sweetrpg-library-objects==0.0.29
     # via -r requirements/pkg.in
-sweetrpg-model-core==0.0.22
+sweetrpg-model-core==0.0.30
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-api-core
@@ -213,7 +241,9 @@ tomli==1.2.2
 tox==3.24.4
     # via -r requirements/tests.in
 typing-extensions==3.10.0.2
-    # via black
+    # via
+    #   async-timeout
+    #   black
 urllib3==1.26.7
     # via
     #   requests
@@ -224,6 +254,8 @@ werkzeug==2.0.2
     # via flask
 wheel==0.37.0
     # via pip-tools
+yarl==1.7.2
+    # via aiohttp
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
