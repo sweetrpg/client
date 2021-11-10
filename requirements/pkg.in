@@ -3,3 +3,4 @@ sweetrpg-api-core
 sweetrpg-model-core
 sweetrpg-library-objects
 requests
+jsonapi-client
