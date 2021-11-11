@@ -4,18 +4,29 @@
 #
 #    pip-compile requirements/tests.in
 #
+aiohttp==3.8.0
+    # via jsonapi-client
+aiosignal==1.2.0
+    # via aiohttp
 asgiref==3.4.1
     # via -r requirements/tests.in
+async-timeout==4.0.1
+    # via aiohttp
 attrs==21.2.0
-    # via pytest
-backports.entry-points-selectable==1.1.0
+    # via
+    #   aiohttp
+    #   jsonschema
+    #   pytest
+backports.entry-points-selectable==1.1.1
     # via virtualenv
 blinker==1.4
     # via -r requirements/tests.in
 certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.7
-    # via requests
+    # via
+    #   aiohttp
+    #   requests
 click==8.0.3
     # via flask
 coverage[toml]==5.5
@@ -39,18 +50,28 @@ flask==2.0.2
     #   sweetrpg-library-objects
 flask-rest-jsonapi==0.31.2
     # via sweetrpg-api-core
+frozenlist==1.2.0
+    # via
+    #   aiohttp
+    #   aiosignal
 greenlet==1.1.2
     # via
     #   -r requirements/tests.in
     #   sqlalchemy
 idna==3.3
-    # via requests
+    # via
+    #   requests
+    #   yarl
 iniconfig==1.1.1
     # via pytest
 itsdangerous==2.0.1
     # via flask
-jinja2==3.0.2
+jinja2==3.0.3
     # via flask
+jsonapi-client==0.9.9
+    # via -r requirements/pkg.in
+jsonschema==4.2.1
+    # via jsonapi-client
 markupsafe==2.0.1
     # via jinja2
 marshmallow==3.14.0
@@ -69,6 +90,10 @@ mongoengine==0.23.1
     #   sweetrpg-api-core
     #   sweetrpg-db
     #   sweetrpg-library-objects
+multidict==5.2.0
+    # via
+    #   aiohttp
+    #   yarl
 packaging==21.2
     # via
     #   pytest
@@ -79,7 +104,7 @@ pluggy==1.0.0
     # via
     #   pytest
     #   tox
-py==1.10.0
+py==1.11.0
     # via
     #   pytest
     #   tox
@@ -89,6 +114,8 @@ pymongo[srv,tls]==3.12.1
     #   sweetrpg-model-core
 pyparsing==2.4.7
     # via packaging
+pyrsistent==0.18.0
+    # via jsonschema
 pytest==6.2.5
     # via
     #   -r requirements/tests.in
@@ -106,6 +133,7 @@ python-dotenv==0.19.1
 requests==2.26.0
     # via
     #   -r requirements/pkg.in
+    #   jsonapi-client
     #   responses
 responses==0.15.0
     # via -r requirements/tests.in
@@ -117,15 +145,15 @@ six==1.16.0
     #   virtualenv
 sqlalchemy==1.4.26
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.20
+sweetrpg-api-core==0.0.24
     # via -r requirements/pkg.in
-sweetrpg-db==0.0.18
+sweetrpg-db==0.0.23
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.29
+sweetrpg-library-objects==0.0.34
     # via -r requirements/pkg.in
-sweetrpg-model-core==0.0.22
+sweetrpg-model-core==0.0.36
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-api-core
@@ -138,6 +166,8 @@ toml==0.10.2
     #   tox
 tox==3.24.4
     # via -r requirements/tests.in
+typing-extensions==3.10.0.2
+    # via async-timeout
 urllib3==1.26.7
     # via
     #   requests
@@ -146,3 +176,5 @@ virtualenv==20.10.0
     # via tox
 werkzeug==2.0.2
     # via flask
+yarl==1.7.2
+    # via aiohttp
