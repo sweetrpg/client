@@ -90,13 +90,13 @@ six==1.16.0
     # via flask-rest-jsonapi
 sqlalchemy==1.4.27
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.43
+sweetrpg-api-core==0.0.44
     # via -r requirements/pkg.in
-sweetrpg-db==0.0.39
+sweetrpg-db==0.0.40
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.53
+sweetrpg-library-objects==0.0.54
     # via -r requirements/pkg.in
 sweetrpg-model-core==0.0.51
     # via
