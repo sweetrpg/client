@@ -47,8 +47,6 @@ itsdangerous==2.0.1
     # via flask
 jinja2==3.0.3
     # via flask
-json-api-doc==0.15.0
-    # via -r requirements/pkg.in
 jsonapi-client==0.9.9
     # via -r requirements/pkg.in
 jsonschema==4.2.1

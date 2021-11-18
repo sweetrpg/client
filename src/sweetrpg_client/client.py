@@ -7,7 +7,7 @@ import logging
 
 import requests
 from sweetrpg_client import constants
-from sweetrpg_client.exceptions import UnknownDataType, NotFound, UnexpectedResponse
+from sweetrpg_client.exceptions import *
 from sweetrpg_client.types import *
 from sweetrpg_client.types.registry import _types
 from sweetrpg_model_core.model.base import Model
@@ -72,11 +72,34 @@ class Client(object):
         r = requests.get(url, headers=headers)
         logging.debug("r: %s", r)
         if r.status_code == 200:
-            schema_class = type_info[constants.API_SCHEMA_CLASS]
-            logging.debug("schema_class: %s", schema_class)
-            schema = schema_class()
+            # schema_class = type_info[constants.API_SCHEMA_CLASS]
+            # logging.debug("schema_class: %s", schema_class)
+            # schema = schema_class()
             j = r.json()
-            obj = schema.load(j)
+            logging.debug("j: %s", j)
+            try:
+                j_type = j['data']['type']
+            except e:
+                logging.exception("Error while getting 'type' from response data")
+                raise InvalidResponseData(url, str(e))
+            if j_type != data_type:
+                raise InvalidResponseData(url, f"Response data type {j_type} does not match expected type: {data_type}")
+            try:
+                j_id = j['data']['id']
+            except e:
+                logging.exception("Error while getting 'id' from response data")
+                raise InvalidResponseData(url, str(e))
+            if j_id != id:
+                raise InvalidResponseData(url, f"Response data ID {j_id} does not match expected ID: {id}")
+
+            obj_class = type_info[constants.OBJECT_CLASS]
+            logging.debug("obj_class: %s", obj_class)
+            data = {
+                'id': j['data']['id']
+            }
+            data.update(j['data']['attributes'])
+            obj = obj_class(**data)
+            # obj = schema.load(j)
             logging.debug("obj: %s", obj)
             return obj
         elif r.status_code == 404:

@@ -14,3 +14,7 @@ class NotFound(Exception):
 
 class UnexpectedResponse(Exception):
     pass
+
+
+class InvalidResponseData(Exception):
+    pass

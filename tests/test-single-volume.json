@@ -1,38 +1,40 @@
 {
-    "data": {
-            "type": "volume",
-            "attributes": {
-                "deleted_at": null,
-                "updated_at": "2021-08-01T07:00:00",
-                "properties": [
-                    {
-                        "id": "{'name': 'isbn', 'value': '12345', 'kind': 'isbn'}"
-                    }
-                ],
-                "created_at": "2021-08-01T07:00:00",
-                "system": "dnd5",
-                "slug": "phb-5e",
-                "name": "Player's Handbook"
-            },
-            "relationships": {
-                "authors": {
-                    "links": {
-                        "self": "/volumes/6122a9aefb6975ab08625d65/relationships/authors",
-                        "related": "/authors/?volume_id=6122a9aefb6975ab08625d65"
-                    }
-                }
-            },
-            "id": "6122a9aefb6975ab08625d65",
-            "links": {
-                "self": "/volumes/6122a9aefb6975ab08625d65"
-            }
+  "data": {
+    "type": "volume",
+    "attributes": {
+      "deleted_at": null,
+      "updated_at": "2021-08-01T07:00:00",
+      "updated_by": "test",
+      "properties": [
+        {
+          "id": "{'name': 'isbn', 'value': '12345', 'kind': 'isbn'}"
+        }
+      ],
+      "created_at": "2021-08-01T07:00:00",
+      "created_by": "test",
+      "system": "dnd5",
+      "slug": "phb-5e",
+      "name": "Player's Handbook"
     },
+    "relationships": {
+      "authors": {
+        "links": {
+          "self": "/volumes/1/relationships/authors",
+          "related": "/authors/?volume_id=1"
+        }
+      }
+    },
+    "id": "1",
     "links": {
-        "self": "http://api-v1:8281/volumes/6122a9aefb6975ab08625d65"
-    },
-    "meta": {
-    },
-    "jsonapi": {
-        "version": "1.0"
+      "self": "/volumes/1"
     }
+  },
+  "links": {
+    "self": "http://api-v1:8281/volumes/1"
+  },
+  "meta": {
+  },
+  "jsonapi": {
+    "version": "1.0"
+  }
 }

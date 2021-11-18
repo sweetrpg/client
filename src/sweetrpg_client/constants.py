@@ -16,3 +16,4 @@ INCLUDE_PARAM = "include"
 # type info keys
 ENDPOINT_PATH = "endpoint_path"
 API_SCHEMA_CLASS = "api_schema_class"
+OBJECT_CLASS = "object_class"

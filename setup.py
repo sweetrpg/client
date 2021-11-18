@@ -7,6 +7,6 @@ setup(
                       "sweetrpg-model-core",
                       "sweetrpg-api-core",
                       "sweetrpg-library-objects",
-                      "requests", "jsonapi-client", "json-api-doc"],
+                      "requests", "jsonapi-client"],
     extras_require={},
 )

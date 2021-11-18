@@ -8,14 +8,21 @@ from sweetrpg_client.client import Client
 from sweetrpg_client.types import VOLUME
 import os
 import json
+from sweetrpg_library_objects.model.volume import Volume
 
 
 def test_client():
     client = Client('http://localhost')
 
+    assert client is not None
+    # TODO
+
 
 def test_registration():
     client = Client('http://localhost')
+
+    assert client is not None
+    # TODO
 
 
 @responses.activate
@@ -28,8 +35,12 @@ def test_get():
                   json=volumes_data,
                   status=200)
 
-    # client = Client('http://localhost')
-    # obj = client.get(VOLUME, '1')
+    client = Client('http://localhost')
+    obj = client.get(VOLUME, '1')
+
+    assert obj is not None
+    assert isinstance(obj, Volume)
+    assert obj.id == '1'
 
 
 @responses.activate
