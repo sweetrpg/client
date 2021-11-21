@@ -4,13 +4,14 @@ __author__ = "Paul Schifferer <dm@sweetrpg.com>"
 """
 
 import logging
-
 import requests
 from sweetrpg_client import constants
 from sweetrpg_client.exceptions import *
 from sweetrpg_client.types import *
 from sweetrpg_client.types.registry import _types
 from sweetrpg_model_core.model.base import Model
+from jsonapi_client import Session
+from sweetrpg_client.helpers import _flatten_object
 
 
 class Client(object):
@@ -61,51 +62,71 @@ class Client(object):
 
         path = type_info[constants.ENDPOINT_PATH]
         logging.debug("path: %s", path)
-        url = f"{self.base_url}/{path}/{id}"
-        logging.debug("url: %s", url)
+        # url = f"{self.base_url}/{path}/{id}"
+        # logging.debug("url: %s", url)
         headers = {}
         if self.access_token:
             logging.debug("adding access token to request headers")
             headers['Authorization'] = f"Bearer {self.access_token}"
 
-        logging.info("Sending request to %s...", url)
-        r = requests.get(url, headers=headers)
-        logging.debug("r: %s", r)
-        if r.status_code == 200:
-            # schema_class = type_info[constants.API_SCHEMA_CLASS]
-            # logging.debug("schema_class: %s", schema_class)
-            # schema = schema_class()
-            j = r.json()
-            logging.debug("j: %s", j)
-            try:
-                j_type = j['data']['type']
-            except e:
-                logging.exception("Error while getting 'type' from response data")
-                raise InvalidResponseData(url, str(e))
-            if j_type != data_type:
-                raise InvalidResponseData(url, f"Response data type {j_type} does not match expected type: {data_type}")
-            try:
-                j_id = j['data']['id']
-            except e:
-                logging.exception("Error while getting 'id' from response data")
-                raise InvalidResponseData(url, str(e))
-            if j_id != id:
-                raise InvalidResponseData(url, f"Response data ID {j_id} does not match expected ID: {id}")
+        request_args = {
+            'headers': headers,
+            # 'params': params,
+        }
 
+        logging.info("Sending request to %s...", self.base_url)
+
+        with Session(self.base_url, request_kwargs=request_args) as s:
+            result = s.get(path, id)
+            if data_type != result.resource.type:
+                raise InvalidResponseData(path, 'type', data_type, f"Response data type {result.resource.type} does not match expected type: {data_type}")
+            if result.resource.id != id:
+                raise InvalidResponseData(path, 'object-id', f"{data_type}:{id}", f"Response data ID {result.resource.id} does not match expected ID: {id}")
+
+            flat_obj = _flatten_object(result.resource)
             obj_class = type_info[constants.OBJECT_CLASS]
             logging.debug("obj_class: %s", obj_class)
-            data = {
-                'id': j['data']['id']
-            }
-            data.update(j['data']['attributes'])
-            obj = obj_class(**data)
-            # obj = schema.load(j)
+            obj = obj_class(**flat_obj)
             logging.debug("obj: %s", obj)
             return obj
-        elif r.status_code == 404:
-            raise NotFound(url)
 
-        raise UnexpectedResponse(url, r.status_code, r.text)
+        # r = requests.get(url, headers=headers)
+        # logging.debug("r: %s", r)
+        # if r.status_code == 200:
+        #     # schema_class = type_info[constants.API_SCHEMA_CLASS]
+        #     # logging.debug("schema_class: %s", schema_class)
+        #     # schema = schema_class()
+        #     j = r.json()
+        #     logging.debug("j: %s", j)
+        #     try:
+        #         j_type = j['data']['type']
+        #     except e:
+        #         logging.exception("Error while getting 'type' from response data")
+        #         raise InvalidResponseData(url, str(e))
+        #     if j_type != data_type:
+        #         raise InvalidResponseData(url, f"Response data type {j_type} does not match expected type: {data_type}")
+        #     try:
+        #         j_id = j['data']['id']
+        #     except e:
+        #         logging.exception("Error while getting 'id' from response data")
+        #         raise InvalidResponseData(url, str(e))
+        #     if j_id != id:
+        #         raise InvalidResponseData(url, f"Response data ID {j_id} does not match expected ID: {id}")
+        #
+        #     obj_class = type_info[constants.OBJECT_CLASS]
+        #     logging.debug("obj_class: %s", obj_class)
+        #     data = {
+        #         'id': j['data']['id']
+        #     }
+        #     data.update(j['data']['attributes'])
+        #     obj = obj_class(**data)
+        #     # obj = schema.load(j)
+        #     logging.debug("obj: %s", obj)
+        #     return obj
+        # elif r.status_code == 404:
+        #     raise NotFound(url)
+        #
+        # raise UnexpectedResponse(url, r.status_code, r.text)
 
     def query(self, data_type: str, page: int = 0, limit: int = constants.DEFAULT_PAGE_SIZE) -> list:
         """
