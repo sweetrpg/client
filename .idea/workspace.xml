@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fb4ded0-ce0c-446c-aee4-fdbcbd89ca6e" name="Changes" comment="Checkpoint.">
-      <change afterPath="$PROJECT_DIR$/src/sweetrpg_client/helpers.py" afterDir="false" />
+    <list default="true" id="3fb4ded0-ce0c-446c-aee4-fdbcbd89ca6e" name="Changes" comment="Add author tests.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage.svg" beforeDir="false" afterPath="$PROJECT_DIR$/coverage.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/dev.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/dev.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/docs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/docs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/pkg.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/pkg.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/tests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/tests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/types/registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/types/registry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test-single-volume.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-single-volume.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test-volumes.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-volumes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/helpers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +33,9 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -170,8 +162,16 @@
       <updated>1637251947906</updated>
       <workItem from="1637251950377" duration="1640000" />
       <workItem from="1637506850345" duration="645000" />
-      <workItem from="1637530682812" duration="1200000" />
+      <workItem from="1637530682812" duration="2679000" />
     </task>
+    <task id="LOCAL-00001" summary="Add author tests.">
+      <created>1637534760509</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637534760509</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,18 +188,11 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/sweetrpg_client/helpers.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add author tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add author tests." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sweetrpg_client$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1637532305162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/sweetrpg_client$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1637535757275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

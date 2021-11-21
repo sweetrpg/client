@@ -12,9 +12,13 @@ def _flatten_object(obj):
     """
     logging.debug("obj: %s", obj)
 
-    print(dir(obj.fields))
-    flattened = dict(obj.attributes._target_object)
-    flattened['id'] = obj.id
+    fields = list(filter(lambda s: not s.startswith('_'), dir(obj.fields)))
+    flattened = {'id': obj.id}
+    for k in fields:
+        try:
+            flattened[k] = obj.attributes[k]
+        except:
+            pass
     logging.debug("flattened: %s", flattened)
 
     return flattened
