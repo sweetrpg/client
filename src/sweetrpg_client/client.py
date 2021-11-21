@@ -90,44 +90,6 @@ class Client(object):
             logging.debug("obj: %s", obj)
             return obj
 
-        # r = requests.get(url, headers=headers)
-        # logging.debug("r: %s", r)
-        # if r.status_code == 200:
-        #     # schema_class = type_info[constants.API_SCHEMA_CLASS]
-        #     # logging.debug("schema_class: %s", schema_class)
-        #     # schema = schema_class()
-        #     j = r.json()
-        #     logging.debug("j: %s", j)
-        #     try:
-        #         j_type = j['data']['type']
-        #     except e:
-        #         logging.exception("Error while getting 'type' from response data")
-        #         raise InvalidResponseData(url, str(e))
-        #     if j_type != data_type:
-        #         raise InvalidResponseData(url, f"Response data type {j_type} does not match expected type: {data_type}")
-        #     try:
-        #         j_id = j['data']['id']
-        #     except e:
-        #         logging.exception("Error while getting 'id' from response data")
-        #         raise InvalidResponseData(url, str(e))
-        #     if j_id != id:
-        #         raise InvalidResponseData(url, f"Response data ID {j_id} does not match expected ID: {id}")
-        #
-        #     obj_class = type_info[constants.OBJECT_CLASS]
-        #     logging.debug("obj_class: %s", obj_class)
-        #     data = {
-        #         'id': j['data']['id']
-        #     }
-        #     data.update(j['data']['attributes'])
-        #     obj = obj_class(**data)
-        #     # obj = schema.load(j)
-        #     logging.debug("obj: %s", obj)
-        #     return obj
-        # elif r.status_code == 404:
-        #     raise NotFound(url)
-        #
-        # raise UnexpectedResponse(url, r.status_code, r.text)
-
     def query(self, data_type: str, page: int = 0, limit: int = constants.DEFAULT_PAGE_SIZE) -> list:
         """
 
@@ -145,8 +107,8 @@ class Client(object):
 
         path = type_info[constants.ENDPOINT_PATH]
         logging.debug("path: %s", path)
-        url = f"{self.base_url}/{path}/"
-        logging.debug("url: %s", url)
+        # url = f"{self.base_url}/{path}/"
+        # logging.debug("url: %s", url)
         headers = {}
         if self.access_token:
             logging.debug("adding access token to request headers")
@@ -157,26 +119,46 @@ class Client(object):
         if limit != constants.DEFAULT_PAGE_SIZE:
             params[constants.LIMIT_PARAM] = min(max(limit, 1), constants.MAX_PAGE_SIZE)
 
-        logging.info("Sending request to %s...", url)
-        r = requests.get(url, headers=headers, params=params)
-        logging.debug("r: %s", r)
-        if r.status_code == 200:
-            schema_class = type_info[constants.API_SCHEMA_CLASS]
-            logging.debug("schema_class: %s", schema_class)
-            schema = schema_class()
-            objs = []
-            j = r.json()
-            # for obj_data in j['data']:
-            objs = schema.load(j, many=True)
-            # logging.debug("obj: %s", obj)
-            # objs.append(obj)
+        request_args = {
+            'headers': headers,
+            'params': params,
+        }
 
+        logging.info("Sending request to %s...", self.base_url)
+
+        with Session(self.base_url, request_kwargs=request_args) as s:
+            result = s.query(path)
+            # if data_type != result.resource.type:
+            #     raise InvalidResponseData(path, 'type', data_type, f"Response data type {result.resource.type} does not match expected type: {data_type}")
+            # if result.resource.id != id:
+            #     raise InvalidResponseData(path, 'object-id', f"{data_type}:{id}", f"Response data ID {result.resource.id} does not match expected ID: {id}")
+
+            flat_objs = list(map(_flatten_object, result.resources))
+            obj_class = type_info[constants.OBJECT_CLASS]
+            logging.debug("obj_class: %s", obj_class)
+            objs = list(map(lambda o: obj_class(**o), flat_objs))
             logging.debug("objs: %s", objs)
             return objs
-        elif r.status_code == 404:
-            raise NotFound(url)
 
-        raise UnexpectedResponse(url, r.status_code, r.text)
+        # r = requests.get(url, headers=headers, params=params)
+        # logging.debug("r: %s", r)
+        # if r.status_code == 200:
+        #     schema_class = type_info[constants.API_SCHEMA_CLASS]
+        #     logging.debug("schema_class: %s", schema_class)
+        #     schema = schema_class()
+        #     objs = []
+        #     j = r.json()
+        #     # for obj_data in j['data']:
+        #     objs = schema.load(j, many=True)
+        #     # logging.debug("obj: %s", obj)
+        #     # objs.append(obj)
+        #
+        #     logging.debug("objs: %s", objs)
+        #     return objs
+        # elif r.status_code == 404:
+        #     raise NotFound(url)
+        #
+        # raise UnexpectedResponse(url, r.status_code, r.text)
 
     def update(self, data_type: str, id: str, update: dict) -> Model:
         """
