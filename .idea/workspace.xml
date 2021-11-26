@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fb4ded0-ce0c-446c-aee4-fdbcbd89ca6e" name="Changes" comment="Add logging">
+    <list default="true" id="3fb4ded0-ce0c-446c-aee4-fdbcbd89ca6e" name="Changes" comment="Update built-in type registry.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage.svg" beforeDir="false" afterPath="$PROJECT_DIR$/coverage.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/types/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/types/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/types/registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/types/registry.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +160,11 @@
       <updated>1637251947906</updated>
       <workItem from="1637251950377" duration="1640000" />
       <workItem from="1637506850345" duration="645000" />
-      <workItem from="1637530682812" duration="5000000" />
+      <workItem from="1637530682812" duration="5935000" />
+      <workItem from="1637612629161" duration="314000" />
+      <workItem from="1637719666636" duration="448000" />
+      <workItem from="1637802307785" duration="885000" />
+      <workItem from="1637942586332" duration="556000" />
     </task>
     <task id="LOCAL-00001" summary="Add author tests.">
       <created>1637534760509</created>
@@ -187,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637536120168</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update built-in type registry.">
+      <created>1637538975538</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637538975538</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +215,8 @@
     <MESSAGE value="Add author tests." />
     <MESSAGE value="Fix flatten function" />
     <MESSAGE value="Add logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add logging" />
+    <MESSAGE value="Update built-in type registry." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update built-in type registry." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sweetrpg_client$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1637538698901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
