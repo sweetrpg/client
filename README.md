@@ -1,4 +1,4 @@
-# CLIENT
+# Client
 
 [![Unit tests](https://github.com/sweetrpg/client/actions/workflows/python-ci.yml/badge.svg)](https://github.com/sweetrpg/client/actions/workflows/python-ci.yml)
 [![Coverage](https://github.com/sweetrpg/client/blob/develop/coverage.svg)](https://github.com/sweetrpg/client)

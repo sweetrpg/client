@@ -127,7 +127,7 @@ class Client(object):
         logging.info("Sending request to %s...", self.base_url)
 
         with Session(self.base_url, request_kwargs=request_args) as s:
-            result = s.query(path)
+            result = s.get(path)
             # if data_type != result.resource.type:
             #     raise InvalidResponseData(path, 'type', data_type, f"Response data type {result.resource.type} does not match expected type: {data_type}")
             # if result.resource.id != id:

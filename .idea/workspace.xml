@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fb4ded0-ce0c-446c-aee4-fdbcbd89ca6e" name="Changes" comment="Update built-in type registry.">
+    <list default="true" id="3fb4ded0-ce0c-446c-aee4-fdbcbd89ca6e" name="Changes" comment="Update coverage.">
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +167,7 @@
       <workItem from="1637612629161" duration="314000" />
       <workItem from="1637719666636" duration="448000" />
       <workItem from="1637802307785" duration="885000" />
-      <workItem from="1637942586332" duration="556000" />
+      <workItem from="1637942586332" duration="1712000" />
     </task>
     <task id="LOCAL-00001" summary="Add author tests.">
       <created>1637534760509</created>
@@ -194,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637538975538</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update coverage.">
+      <created>1637945981619</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637945981619</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,9 +226,10 @@
     <MESSAGE value="Fix flatten function" />
     <MESSAGE value="Add logging" />
     <MESSAGE value="Update built-in type registry." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update built-in type registry." />
+    <MESSAGE value="Update coverage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update coverage." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sweetrpg_client$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1637538698901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/sweetrpg_client$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1637945904268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
