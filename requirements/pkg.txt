@@ -16,7 +16,7 @@ attrs==21.2.0
     #   jsonschema
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.7
+charset-normalizer==2.0.8
     # via
     #   aiohttp
     #   requests
@@ -88,17 +88,17 @@ six==1.16.0
     # via flask-rest-jsonapi
 sqlalchemy==1.4.27
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.48
+sweetrpg-api-core==0.0.50
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
-sweetrpg-db==0.0.40
+sweetrpg-db==0.0.41
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
 sweetrpg-library-objects==0.0.59
     # via -r requirements/pkg.in
-sweetrpg-model-core==0.0.51
+sweetrpg-model-core==0.0.52
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-api-core
