@@ -23,13 +23,13 @@ babel==2.9.1
     # via sphinx
 backports.entry-points-selectable==1.1.1
     # via virtualenv
-black==21.11b1
+black==21.12b0
     # via -r requirements/dev.in
 blinker==1.4
     # via -r requirements/tests.in
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.8
+charset-normalizer==2.0.9
     # via
     #   aiohttp
     #   requests
@@ -171,8 +171,6 @@ python-dotenv==0.19.2
     # via -r requirements/tests.in
 pytz==2021.3
     # via babel
-regex==2021.11.10
-    # via black
 requests==2.26.0
     # via
     #   -r requirements/pkg.in
@@ -218,17 +216,17 @@ sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
 sqlalchemy==1.4.27
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.51
+sweetrpg-api-core==0.0.53
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
-sweetrpg-db==0.0.42
+sweetrpg-db==0.0.43
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.60
+sweetrpg-library-objects==0.0.61
     # via -r requirements/pkg.in
-sweetrpg-model-core==0.0.52
+sweetrpg-model-core==0.0.53
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-api-core
@@ -245,7 +243,7 @@ tomli==1.2.2
     #   pep517
 tox==3.24.4
     # via -r requirements/tests.in
-typing-extensions==4.0.0
+typing-extensions==4.0.1
     # via
     #   async-timeout
     #   black
