@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "type": "author",
+            "type": "person",
             "attributes": {
                 "updated_by": "system",
                 "name": "Bob 3",
@@ -13,11 +13,11 @@
             },
             "id": "615bd153a458a31f67155f3f",
             "links": {
-                "self": "/authors/615bd153a458a31f67155f3f"
+                "self": "/persons/615bd153a458a31f67155f3f"
             }
         },
         {
-            "type": "author",
+            "type": "person",
             "attributes": {
                 "updated_by": "system",
                 "name": "Bob 4",
@@ -29,12 +29,12 @@
             },
             "id": "615bda0ce91ec0c2f7ef0cd9",
             "links": {
-                "self": "/authors/615bda0ce91ec0c2f7ef0cd9"
+                "self": "/persons/615bda0ce91ec0c2f7ef0cd9"
             }
         }
     ],
     "links": {
-        "self": "http://api-v1.sweetrpg-library.svc.cluster.local:8281/authors/?page%5Bsize%5D=5&sort=name&page%5Bnumber%5D=1"
+        "self": "http://api-v1.sweetrpg-library.svc.cluster.local:8281/persons/?page%5Bsize%5D=5&sort=name&page%5Bnumber%5D=1"
     },
     "meta": {
         "count": 2

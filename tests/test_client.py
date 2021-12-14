@@ -5,11 +5,11 @@ __author__ = "Paul Schifferer <dm@sweetrpg.com>"
 
 import responses
 from sweetrpg_client.client import Client
-from sweetrpg_client.types import VOLUME, AUTHOR
+from sweetrpg_client.types import VOLUME, PERSON
 import os
 import json
 from sweetrpg_library_objects.model.volume import Volume
-from sweetrpg_library_objects.model.author import Author
+from sweetrpg_library_objects.model.person import Person
 from sweetrpg_client.exceptions import *
 
 def test_client():
@@ -47,7 +47,7 @@ def test_get_volume():
 @responses.activate
 def test_get_volume_wrong_type():
     # load test data file
-    path = os.path.dirname(__file__) + '/test-single-author.json'
+    path = os.path.dirname(__file__) + '/test-single-person.json'
     with open(path, 'r') as v:
         volumes_data = json.load(v)
     responses.add(responses.GET, 'http://localhost/volumes/1',
@@ -99,31 +99,31 @@ def test_query_volumes():
 
 
 @responses.activate
-def test_get_author():
+def test_get_person():
     # load test data file
-    path = os.path.dirname(__file__) + '/test-single-author.json'
+    path = os.path.dirname(__file__) + '/test-single-person.json'
     with open(path, 'r') as v:
-        author_data = json.load(v)
-    responses.add(responses.GET, 'http://localhost/authors/1',
-                  json=author_data,
+        person_data = json.load(v)
+    responses.add(responses.GET, 'http://localhost/persons/1',
+                  json=person_data,
                   status=200)
 
     client = Client('http://localhost')
-    obj = client.get(AUTHOR, '1')
+    obj = client.get(PERSON, '1')
 
     assert obj is not None
-    assert isinstance(obj, Author)
+    assert isinstance(obj, Person)
     assert obj.id == '1'
 
 
 @responses.activate
-def test_query_authors():
+def test_query_persons():
     # load test data file
-    path = os.path.dirname(__file__) + '/test-authors.json'
+    path = os.path.dirname(__file__) + '/test-persons.json'
     with open(path, 'r') as v:
-        authors_data = json.load(v)
-    responses.add(responses.GET, 'http://localhost/authors/',
-                  json=authors_data,
+        persons_data = json.load(v)
+    responses.add(responses.GET, 'http://localhost/persons/',
+                  json=persons_data,
                   status=200)
 
     # client = Client('http://localhost')

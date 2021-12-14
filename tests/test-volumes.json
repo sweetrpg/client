@@ -20,10 +20,10 @@
             },
             "id": "1",
             "relationships": {
-                "authors": {
+                "persons": {
                     "links": {
-                        "self": "/volumes/1/relationships/authors",
-                        "related": "/authors/?volume_id=1"
+                        "self": "/volumes/1/relationships/persons",
+                        "related": "/persons/?volume_id=1"
                     }
                 }
             },
@@ -47,10 +47,10 @@
             },
             "id": "2",
             "relationships": {
-                "authors": {
+                "persons": {
                     "links": {
-                        "self": "/volumes/2/relationships/authors",
-                        "related": "/authors/?volume_id=2"
+                        "self": "/volumes/2/relationships/persons",
+                        "related": "/persons/?volume_id=2"
                     }
                 }
             },
@@ -74,10 +74,10 @@
             },
             "id": "3",
             "relationships": {
-                "authors": {
+                "persons": {
                     "links": {
-                        "self": "/volumes/3/relationships/authors",
-                        "related": "/authors/?volume_id=3"
+                        "self": "/volumes/3/relationships/persons",
+                        "related": "/persons/?volume_id=3"
                     }
                 }
             },

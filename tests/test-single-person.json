@@ -1,6 +1,6 @@
 {
     "data": {
-        "type": "author",
+        "type": "person",
         "attributes": {
             "updated_by": "system",
             "name": "Bob 3",
@@ -12,11 +12,11 @@
         },
         "id": "1",
         "links": {
-            "self": "/authors/1"
+            "self": "/persons/1"
         }
     },
     "links": {
-        "self": "/authors/1"
+        "self": "/persons/1"
     },
     "jsonapi": {
         "version": "1.0"

@@ -7,22 +7,25 @@
             "updated_at": "2021-08-01T07:00:00",
             "deleted_at": null,
             "properties": [
+                    {"name": "isbn", "value": "12345", "kind": "isbn"}
+            ],
+            "tags": [
                 {
-                    "id": "{'name': 'isbn', 'value': '12345', 'kind': 'isbn'}"
+                    "name": "tag1","value": "value1"
                 }
             ],
             "created_by": "paul",
-            "name": "Player's Handbook",
-            "system": "dnd5",
+            "title": "Player's Handbook",
+            "system_id": "dnd5",
             "deleted_by": "system",
             "updated_by": "paul"
         },
         "id": "1",
         "relationships": {
-            "authors": {
+            "persons": {
                 "links": {
-                    "self": "/volumes/1/relationships/authors",
-                    "related": "/authors/?volume_id=1"
+                    "self": "/volumes/1/relationships/persons",
+                    "related": "/persons/?volume_id=1"
                 }
             }
         },

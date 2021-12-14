@@ -3,10 +3,10 @@ __author__ = "Paul Schifferer <dm@sweetrpg.com>"
 """Types.
 """
 
-AUTHOR = 'author'
+CONTRIBUTION = 'contribution'
+PERSON = 'person'
 PUBLISHER = 'publisher'
 REVIEW = 'review'
 STUDIO = 'studio'
 SYSTEM = 'system'
 VOLUME = 'volume'
-TAG = 'tag'
