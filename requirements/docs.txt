@@ -10,7 +10,7 @@ aiosignal==1.2.0
     # via aiohttp
 alabaster==0.7.12
     # via sphinx
-async-timeout==4.0.1
+async-timeout==4.0.2
     # via aiohttp
 attrs==21.2.0
     # via
@@ -62,7 +62,7 @@ jinja2==3.0.3
     #   sphinx
 jsonapi-client==0.9.9
     # via -r requirements/pkg.in
-jsonschema==4.2.1
+jsonschema==4.3.2
     # via jsonapi-client
 markupsafe==2.0.1
     # via jinja2
@@ -143,9 +143,9 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sqlalchemy==1.4.28
+sqlalchemy==1.4.29
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.59
+sweetrpg-api-core==0.0.60
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
@@ -161,8 +161,6 @@ sweetrpg-model-core==0.0.54
     #   sweetrpg-api-core
     #   sweetrpg-db
     #   sweetrpg-library-objects
-typing-extensions==4.0.1
-    # via async-timeout
 urllib3==1.26.7
     # via requests
 werkzeug==2.0.2
