@@ -92,7 +92,7 @@ sweetrpg-api-core==0.0.62
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
-sweetrpg-db==0.0.46
+sweetrpg-db==0.0.47
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
