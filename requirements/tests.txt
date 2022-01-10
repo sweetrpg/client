@@ -146,7 +146,7 @@ six==1.16.0
     #   virtualenv
 sqlalchemy==1.4.29
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.68
+sweetrpg-api-core==0.0.69
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
