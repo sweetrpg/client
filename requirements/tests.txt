@@ -136,7 +136,7 @@ requests==2.27.1
     #   -r requirements/pkg.in
     #   jsonapi-client
     #   responses
-responses==0.16.0
+responses==0.17.0
     # via -r requirements/tests.in
 six==1.16.0
     # via
