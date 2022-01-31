@@ -20,13 +20,13 @@ babel==2.9.1
     # via sphinx
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.10
+charset-normalizer==2.0.11
     # via
     #   aiohttp
     #   requests
 click==8.0.3
     # via flask
-dnspython==2.1.0
+dnspython==2.2.0
     # via
     #   pymongo
     #   sweetrpg-db
@@ -42,7 +42,7 @@ flask==2.0.2
     #   sweetrpg-library-objects
 flask-rest-jsonapi==0.31.2
     # via sweetrpg-api-core
-frozenlist==1.2.0
+frozenlist==1.3.0
     # via
     #   aiohttp
     #   aiosignal
@@ -62,7 +62,7 @@ jinja2==3.0.3
     #   sphinx
 jsonapi-client==0.9.9
     # via -r requirements/pkg.in
-jsonschema==4.3.3
+jsonschema==4.4.0
     # via jsonapi-client
 markupsafe==2.0.1
     # via jinja2
@@ -82,7 +82,7 @@ mongoengine==0.23.1
     #   sweetrpg-api-core
     #   sweetrpg-db
     #   sweetrpg-library-objects
-multidict==5.2.0
+multidict==6.0.2
     # via
     #   aiohttp
     #   yarl
@@ -101,9 +101,9 @@ pymongo[srv,tls]==3.12.1
     #   mongoengine
     #   sweetrpg-db
     #   sweetrpg-model-core
-pyparsing==3.0.6
+pyparsing==3.0.7
     # via packaging
-pyrsistent==0.18.0
+pyrsistent==0.18.1
     # via jsonschema
 pytz==2021.3
     # via babel
@@ -125,7 +125,7 @@ sphinx==4.3.2
     #   sphinx-issues
     #   sphinx-tabs
     #   sphinxcontrib-log-cabinet
-sphinx-issues==2.0.0
+sphinx-issues==3.0.1
     # via -r requirements/docs.in
 sphinx-tabs==3.2.0
     # via -r requirements/docs.in
@@ -143,9 +143,9 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sqlalchemy==1.4.29
+sqlalchemy==1.4.31
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.69
+sweetrpg-api-core==0.0.70
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
@@ -153,7 +153,7 @@ sweetrpg-db==0.0.49
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.73
+sweetrpg-library-objects==0.0.74
     # via -r requirements/pkg.in
 sweetrpg-model-core==0.0.56
     # via
