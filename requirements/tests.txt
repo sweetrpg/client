@@ -27,7 +27,7 @@ charset-normalizer==2.0.11
     #   requests
 click==8.0.3
     # via flask
-coverage[toml]==6.3
+coverage[toml]==6.3.1
     # via
     #   coverage-badge
     #   pytest-cov
@@ -117,7 +117,7 @@ pyparsing==3.0.7
     # via packaging
 pyrsistent==0.18.1
     # via jsonschema
-pytest==6.2.5
+pytest==7.0.0
     # via
     #   -r requirements/tests.in
     #   pytest-cov
@@ -136,17 +136,16 @@ requests==2.27.1
     #   -r requirements/pkg.in
     #   jsonapi-client
     #   responses
-responses==0.17.0
+responses==0.18.0
     # via -r requirements/tests.in
 six==1.16.0
     # via
     #   flask-rest-jsonapi
-    #   responses
     #   tox
     #   virtualenv
 sqlalchemy==1.4.31
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.72
+sweetrpg-api-core==0.0.73
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
@@ -154,27 +153,27 @@ sweetrpg-db==0.0.51
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.76
+sweetrpg-library-objects==0.0.77
     # via -r requirements/pkg.in
-sweetrpg-model-core==0.0.57
+sweetrpg-model-core==0.0.58
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-api-core
     #   sweetrpg-db
     #   sweetrpg-library-objects
 toml==0.10.2
-    # via
-    #   pytest
-    #   tox
+    # via tox
 tomli==2.0.0
-    # via coverage
+    # via
+    #   coverage
+    #   pytest
 tox==3.24.5
     # via -r requirements/tests.in
 urllib3==1.26.8
     # via
     #   requests
     #   responses
-virtualenv==20.13.0
+virtualenv==20.13.1
     # via tox
 werkzeug==2.0.2
     # via flask

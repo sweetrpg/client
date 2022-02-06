@@ -36,7 +36,7 @@ click==8.0.3
     #   black
     #   flask
     #   pip-tools
-coverage[toml]==6.3
+coverage[toml]==6.3.1
     # via
     #   coverage-badge
     #   pytest-cov
@@ -153,7 +153,7 @@ pyparsing==3.0.7
     # via packaging
 pyrsistent==0.18.1
     # via jsonschema
-pytest==6.2.5
+pytest==7.0.0
     # via
     #   -r requirements/tests.in
     #   pytest-cov
@@ -175,14 +175,13 @@ requests==2.27.1
     #   jsonapi-client
     #   responses
     #   sphinx
-responses==0.17.0
+responses==0.18.0
     # via -r requirements/tests.in
 rstcheck==3.3.1
     # via -r requirements/docs.in
 six==1.16.0
     # via
     #   flask-rest-jsonapi
-    #   responses
     #   tox
     #   virtualenv
 snowballstemmer==2.2.0
@@ -214,7 +213,7 @@ sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
 sqlalchemy==1.4.31
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.72
+sweetrpg-api-core==0.0.73
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
@@ -222,23 +221,22 @@ sweetrpg-db==0.0.51
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.76
+sweetrpg-library-objects==0.0.77
     # via -r requirements/pkg.in
-sweetrpg-model-core==0.0.57
+sweetrpg-model-core==0.0.58
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-api-core
     #   sweetrpg-db
     #   sweetrpg-library-objects
 toml==0.10.2
-    # via
-    #   pytest
-    #   tox
+    # via tox
 tomli==2.0.0
     # via
     #   black
     #   coverage
     #   pep517
+    #   pytest
 tox==3.24.5
     # via -r requirements/tests.in
 typing-extensions==4.0.1
@@ -247,7 +245,7 @@ urllib3==1.26.8
     # via
     #   requests
     #   responses
-virtualenv==20.13.0
+virtualenv==20.13.1
     # via tox
 werkzeug==2.0.2
     # via flask
