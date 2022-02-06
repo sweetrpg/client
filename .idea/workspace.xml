@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fb4ded0-ce0c-446c-aee4-fdbcbd89ca6e" name="Changes" comment="Fix fetch of multiple items.">
+    <list default="true" id="3fb4ded0-ce0c-446c-aee4-fdbcbd89ca6e" name="Changes" comment="Contributions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/dev.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/dev.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/docs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/docs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/pkg.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/pkg.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/tests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/tests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/types/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/types/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sweetrpg_client/types/registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sweetrpg_client/types/registry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test-authors.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-persons.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test-single-author.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-single-person.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test-single-volume.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-single-volume.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test-volumes.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-volumes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +178,10 @@
       <workItem from="1638289011309" duration="602000" />
       <workItem from="1638493030520" duration="330000" />
       <workItem from="1639237490742" duration="1824000" />
-      <workItem from="1639439625820" duration="751000" />
+      <workItem from="1639439625820" duration="1545000" />
+      <workItem from="1639490680442" duration="397000" />
+      <workItem from="1639493311030" duration="110000" />
+      <workItem from="1639515396021" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="Add author tests.">
       <created>1637534760509</created>
@@ -233,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637950208193</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Contributions">
+      <created>1639443081906</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639443081906</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,9 +256,10 @@
     <MESSAGE value="Update built-in type registry." />
     <MESSAGE value="Update coverage." />
     <MESSAGE value="Fix fetch of multiple items." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix fetch of multiple items." />
+    <MESSAGE value="Contributions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Contributions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sweetrpg_client$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1639442928938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/sweetrpg_client$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1639443034665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
