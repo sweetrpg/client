@@ -153,7 +153,7 @@ pyparsing==3.0.7
     # via packaging
 pyrsistent==0.18.1
     # via jsonschema
-pytest==7.0.0
+pytest==7.0.1
     # via
     #   -r requirements/tests.in
     #   pytest-cov
@@ -239,8 +239,6 @@ tomli==2.0.0
     #   pytest
 tox==3.24.5
     # via -r requirements/tests.in
-typing-extensions==4.0.1
-    # via black
 urllib3==1.26.8
     # via
     #   requests
