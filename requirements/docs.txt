@@ -118,7 +118,7 @@ six==1.16.0
     # via flask-rest-jsonapi
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==4.3.2
+sphinx==4.4.0
     # via
     #   -r requirements/docs.in
     #   pallets-sphinx-themes
@@ -167,6 +167,3 @@ werkzeug==2.0.3
     # via flask
 yarl==1.7.2
     # via aiohttp
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
