@@ -16,13 +16,13 @@ attrs==21.4.0
     #   jsonschema
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.11
+charset-normalizer==2.0.12
     # via
     #   aiohttp
     #   requests
-click==8.0.3
+click==8.0.4
     # via flask
-dnspython==2.2.0
+dnspython==2.2.1
     # via
     #   pymongo
     #   sweetrpg-db
@@ -43,7 +43,7 @@ idna==3.3
     # via
     #   requests
     #   yarl
-itsdangerous==2.0.1
+itsdangerous==2.1.0
     # via flask
 jinja2==3.0.3
     # via flask
@@ -51,7 +51,7 @@ jsonapi-client==0.9.9
     # via -r requirements/pkg.in
 jsonschema==4.4.0
     # via jsonapi-client
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via jinja2
 marshmallow==3.14.1
     # via
@@ -64,7 +64,7 @@ marshmallow-jsonapi==0.24.0
     # via
     #   flask-rest-jsonapi
     #   sweetrpg-library-objects
-mongoengine==0.23.1
+mongoengine==0.24.0
     # via
     #   sweetrpg-api-core
     #   sweetrpg-db
@@ -86,9 +86,9 @@ requests==2.27.1
     #   jsonapi-client
 six==1.16.0
     # via flask-rest-jsonapi
-sqlalchemy==1.4.31
+sqlalchemy==1.4.32
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.75
+sweetrpg-api-core==0.0.76
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
@@ -96,9 +96,9 @@ sweetrpg-db==0.0.52
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.79
+sweetrpg-library-objects==0.0.80
     # via -r requirements/pkg.in
-sweetrpg-model-core==0.0.59
+sweetrpg-model-core==0.0.60
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-api-core
@@ -106,7 +106,7 @@ sweetrpg-model-core==0.0.59
     #   sweetrpg-library-objects
 urllib3==1.26.8
     # via requests
-werkzeug==2.0.2
+werkzeug==2.0.3
     # via flask
 yarl==1.7.2
     # via aiohttp
