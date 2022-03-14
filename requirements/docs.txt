@@ -153,7 +153,7 @@ sweetrpg-db==0.0.52
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.83
+sweetrpg-library-objects==0.0.86
     # via -r requirements/pkg.in
 sweetrpg-model-core==0.0.62
     # via
