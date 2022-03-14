@@ -213,7 +213,7 @@ sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
 sqlalchemy==1.4.32
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.78
+sweetrpg-api-core==0.0.81
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
@@ -239,8 +239,6 @@ tomli==2.0.1
     #   pytest
 tox==3.24.5
     # via -r requirements/tests.in
-typing-extensions==4.1.1
-    # via black
 urllib3==1.26.8
     # via
     #   requests
