@@ -10,7 +10,7 @@ aiosignal==1.2.0
     # via aiohttp
 alabaster==0.7.12
     # via sphinx
-asgiref==3.5.0
+asgiref==3.5.2
     # via -r requirements/tests.in
 async-timeout==4.0.2
     # via aiohttp
