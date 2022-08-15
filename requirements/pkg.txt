@@ -80,7 +80,7 @@ pymongo[srv,tls]==3.12.1
     #   sweetrpg-model-core
 pyrsistent==0.18.1
     # via jsonschema
-requests==2.27.1
+requests==2.28.1
     # via
     #   -r requirements/pkg.in
     #   jsonapi-client
