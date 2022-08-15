@@ -50,7 +50,7 @@ dnspython==2.2.1
     # via
     #   pymongo
     #   sweetrpg-db
-docutils==0.16
+docutils==0.17.1
     # via
     #   rstcheck
     #   sphinx
@@ -88,6 +88,7 @@ jinja2==3.0.3
     # via
     #   flask
     #   sphinx
+    #   sphinx-tabs
 jsonapi-client==0.9.9
     # via -r requirements/pkg.in
 jsonschema==4.4.0
@@ -198,7 +199,7 @@ sphinx==4.3.2
     #   sphinxcontrib-log-cabinet
 sphinx-issues==3.0.1
     # via -r requirements/docs.in
-sphinx-tabs==3.2.0
+sphinx-tabs==3.4.0
     # via -r requirements/docs.in
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
