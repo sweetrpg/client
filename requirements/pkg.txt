@@ -80,7 +80,7 @@ pymongo[srv,tls]==3.12.1
     #   sweetrpg-model-core
 pyrsistent==0.18.1
     # via jsonschema
-requests==2.27.1
+requests==2.28.1
     # via
     #   -r requirements/pkg.in
     #   jsonapi-client
@@ -88,7 +88,7 @@ six==1.16.0
     # via flask-rest-jsonapi
 sqlalchemy==1.4.32
     # via flask-rest-jsonapi
-sweetrpg-api-core==0.0.78
+sweetrpg-api-core==0.0.81
     # via
     #   -r requirements/pkg.in
     #   sweetrpg-library-objects
@@ -96,7 +96,7 @@ sweetrpg-db==0.0.52
     # via
     #   sweetrpg-api-core
     #   sweetrpg-library-objects
-sweetrpg-library-objects==0.0.83
+sweetrpg-library-objects==0.0.86
     # via -r requirements/pkg.in
 sweetrpg-model-core==0.0.62
     # via
