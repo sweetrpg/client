@@ -173,7 +173,7 @@ python-dotenv==0.19.2
     # via -r requirements/tests.in
 pytz==2021.3
     # via babel
-requests==2.27.1
+requests==2.28.1
     # via
     #   -r requirements/pkg.in
     #   jsonapi-client
