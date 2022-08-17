@@ -8,5 +8,5 @@ pytest-cov==3.0
 pytest-env
 pytest-ordering
 python-dotenv==0.19.2
-tox==3.24.5
+tox==3.25.1
 responses
