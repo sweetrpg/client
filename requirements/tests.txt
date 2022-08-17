@@ -8,7 +8,7 @@ aiohttp==3.8.1
     # via jsonapi-client
 aiosignal==1.2.0
     # via aiohttp
-asgiref==3.5.0
+asgiref==3.5.2
     # via -r requirements/tests.in
 async-timeout==4.0.2
     # via aiohttp
