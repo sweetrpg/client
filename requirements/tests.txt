@@ -17,7 +17,7 @@ attrs==21.4.0
     #   aiohttp
     #   jsonschema
     #   pytest
-blinker==1.4
+blinker==1.5
     # via -r requirements/tests.in
 certifi==2021.10.8
     # via requests
