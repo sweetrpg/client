@@ -6,6 +6,7 @@ __author__ = "Paul Schifferer <dm@sweetrpg.com>"
 from ..constants import *
 from ..types import *
 from sweetrpg_library_objects.api.volume.schema import VolumeAPISchema
+from sweetrpg_library_objects.api.license.schema import LicenseAPISchema
 from sweetrpg_library_objects.api.person.schema import PersonAPISchema
 from sweetrpg_library_objects.api.contribution.schema import ContributionAPISchema
 from sweetrpg_library_objects.api.publisher.schema import PublisherAPISchema
@@ -19,6 +20,7 @@ from sweetrpg_library_objects.model.publisher import Publisher
 from sweetrpg_library_objects.model.system import System
 from sweetrpg_library_objects.model.studio import Studio
 from sweetrpg_library_objects.model.review import Review
+from sweetrpg_library_objects.model.license import License
 
 
 _types = {
@@ -26,6 +28,11 @@ _types = {
         ENDPOINT_PATH: 'volumes',
         API_SCHEMA_CLASS: VolumeAPISchema,
         OBJECT_CLASS: Volume,
+    },
+    LICENSE: {
+        ENDPOINT_PATH: 'licenses',
+        API_SCHEMA_CLASS: LicenseAPISchema,
+        OBJECT_CLASS: License,
     },
     PERSON: {
         ENDPOINT_PATH: 'persons',
